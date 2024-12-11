@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registratsiya va Kirish</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+        .container h2 {
+            margin-bottom: 20px;
+        }
+        .container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .container button:hover {
+            background-color: #4cae4c;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="authContainer">
+        <h2>Xush kelibsiz!</h2>
+        <button onclick="showRegistration()">Registratsiya</button>
+        <button onclick="showLogin()">Kirish</button>
+    </div>
+
+    <div class="container" id="registrationContainer" style="display: none;">
+        <h2>Registratsiya</h2>
+        <input type="text" id="regUsername" placeholder="Login" required>
+        <input type="password" id="regPassword" placeholder="Parol" required>
+        <span class="error" id="regError"></span>
+        <button onclick="register()">Ro'yxatdan o'tish</button>
+    </div>
+
+    <div class="container" id="loginContainer" style="display: none;">
+        <h2>Kirish</h2>
+        <input type="text" id="loginUsername" placeholder="Login" required>
+        <input type="password" id="loginPassword" placeholder="Parol" required>
+        <span class="error" id="loginError"></span>
+        <button onclick="login()">Kirish</button>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
